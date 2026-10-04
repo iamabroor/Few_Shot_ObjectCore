@@ -1,0 +1,16 @@
+# ObjectCore replication - pinned environment (as used on AWS g5.2xlarge, NVIDIA A10G, driver 550.144.03)
+# Python 3.10. Install PyTorch with CUDA 12.1 first (setup.sh does this):
+#   uv pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.57.1
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.7.2
+pillow
+matplotlib
+pyyaml
+accelerate
+timm
+tqdm
+huggingface_hub

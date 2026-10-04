@@ -1,0 +1,3 @@
+# Phase A - no detector fine-tuning (paper ablation "no fine-tuning": 80.8 - 11.8 = 69.0 I-AUROC at k = 4)
+base: objectcore_default.yaml
+finetune: false

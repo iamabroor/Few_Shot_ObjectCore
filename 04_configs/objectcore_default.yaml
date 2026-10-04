@@ -1,0 +1,39 @@
+# ObjectCore - default settings (paper values where the paper states them).
+# Every key is a command-line flag of 02_src/source_code/objectcore.py (key -> --key).
+# Used by 03_scripts/preprocessing.py and training.py (see 04_configs/README.md). run_all.sh uses the same defaults (they are objectcore.py defaults).
+
+# ---- data / protocol (paper: k = 1, 2, 4 random support images, 3 draws each)
+data_root: ~/objectcore/data/mvtec_loco
+categories: [breakfast_box, juice_bottle, pushpins, screw_bag, splicing_connectors]
+shots: [1, 2, 4]
+draws: 3                     # support draw seed s -> random.Random(1000*k + s)
+
+# ---- models (paper: GroundingDINO Swin-B, SAM ViT-B)
+gdino: IDEA-Research/grounding-dino-base
+sam: facebook/sam-vit-base
+prompt: "part."              # paper: text prompt "part"
+img_size: 800                # paper: 800 x 800
+box_threshold: 0.25          # paper
+text_threshold: 0.25         # paper
+
+# ---- detector fine-tuning (Phase B; paper: 100 epochs, AdamW, lr 1e-5, batch 1, L_cls only)
+finetune: false
+ft_epochs: 100
+ft_lr: 1.0e-5
+ft_wd: 1.0e-4                # not in paper (GroundingDINO default)
+ft_clip: 0.1                 # not in paper (GroundingDINO default)
+ft_loss_tokens: all          # all = Hugging Face default loss; phrase = our fix (loss on "part" token only)
+
+# ---- features / memory banks / scoring
+mean_kernel: 5               # paper: 5x5 mean filter on Swin layers 1-3
+feat_res: 100                # not in paper: common feature grid (stride 8 at 800 px)
+gamma: 0.1                   # paper: mask-size weight in the matching cost
+sigma: 4.0                   # paper: Gaussian smoothing of A_S + A_L
+top_frac: 0.01               # paper: image score = mean of top 1 %
+map_res: 256                 # not in paper
+pixel_res: 256               # resolution for P-AUROC / P-F1
+nms: null                    # paper mentions no NMS
+
+# ---- output
+out_dir: ~/objectcore/runs/manual/results
+save_maps: ["4:0"]           # save anomaly maps for k=4, seed 0

@@ -1,0 +1,6 @@
+# ~5 min check that everything works (juice_bottle, 4-shot, 1 draw, 40 test images)
+base: objectcore_default.yaml
+categories: [juice_bottle]
+shots: [4]
+draws: 1
+max_test: 40

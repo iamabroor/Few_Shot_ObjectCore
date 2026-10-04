@@ -1,0 +1,5 @@
+setting (k=4),paper_I-AUROC,paper_delta,ours_I-AUROC,ours_delta,note
+Full model (fine-tuned detector),80.8,0.0,63.48,0.0,ours = run 1 Phase B
+Only M_S (structural bank),68.7,-12.1,70.3,+6.8,ours = mean of per-category structural-only branch (k=4)
+Only M_L (logical bank),70.6,-10.2,60.5,-3.0,ours = mean of per-category logical-only branch (k=4)
+No detector fine-tuning,69.0,-11.8,61.38,-2.1,ours = run 1 Phase A

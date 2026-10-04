@@ -1,0 +1,5 @@
+# Phase B - detector fine-tuned on the support set exactly as specified in the paper.
+# This is the setting of run 1 (runs/2026-10-01_2301_all/results/B_finetune).
+base: objectcore_default.yaml
+finetune: true
+ft_loss_tokens: all

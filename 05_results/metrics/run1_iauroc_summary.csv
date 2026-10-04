@@ -1,0 +1,7 @@
+phase,k,i_auroc_mean,i_auroc_std,paper_objectcore,gap_to_paper,source
+B_finetune (paper setting),1,60.83,1.38,72.5,-11.67,run 2026-10-01_2301_all summarize.py
+B_finetune (paper setting),2,66.25,2.11,74.6,-8.35,run 2026-10-01_2301_all summarize.py
+B_finetune (paper setting),4,63.48,3.37,80.8,-17.32,run 2026-10-01_2301_all summarize.py
+A_zeroshot (no fine-tuning),1,57.75,,,,run 2026-10-01_2301_all summarize.py
+A_zeroshot (no fine-tuning),2,58.80,,,,run 2026-10-01_2301_all summarize.py
+A_zeroshot (no fine-tuning),4,61.38,,69.0,-7.62,paper target = 80.8 - 11.8 (Table 3 'no fine-tuning')

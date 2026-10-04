@@ -1,0 +1,6 @@
+# Phase B with our fix: classification loss only on the phrase token ("part"),
+# [CLS] / "." / [SEP] left out. Keeps the detections after fine-tuning
+# (diagnostic: 7 boxes kept on the support image, 6 on test images, vs 1 with the default loss).
+base: objectcore_default.yaml
+finetune: true
+ft_loss_tokens: phrase

@@ -1,0 +1,4 @@
+variant,ft_loss_tokens,grad_clip,objects_on_support_after_ft,pseudo_labels_on_support,objects_on_3_test_images_after_ft,note
+pretrained (no fine-tuning),-,-,7,7,,breakfast_box train/good/266.png (k=1 seed=2 support of run 1)
+V1 paper setting (HF default loss),all,0.1,1,7,"[1, 1, 1]",detector collapses - almost every object lost
+V2 phrase-token loss (our fix),phrase,0.1,7,7,"[6, 6, 6]",objects kept

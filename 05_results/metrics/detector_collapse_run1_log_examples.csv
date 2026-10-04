@@ -1,0 +1,5 @@
+category,k,seed,pseudo_detections_before_ft,objects_after_ft
+breakfast_box,1,2,7,0
+screw_bag,1,2,2,0
+splicing_connectors,1,2,3,1
+pushpins,1,2,15,15

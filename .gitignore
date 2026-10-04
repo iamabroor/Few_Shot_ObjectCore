@@ -1,0 +1,23 @@
+# data and weights - never commit
+data/
+mvtec_loco*/
+hf_cache/
+*.tar.xz
+*.pth
+*.pt
+*.safetensors
+detector/
+# environments
+env/
+.venv/
+__pycache__/
+*.pyc
+# large run outputs (keep report/ figures + CSVs, drop raw maps)
+runs/
+**/maps/*.npz
+*.npz
+*.tar.gz
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
