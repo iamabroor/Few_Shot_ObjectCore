@@ -4,7 +4,7 @@ Independent replication of **ObjectCore: Efficient Few-shot Logical Anomaly Dete
 
 The official code is not public, so this repository **reimplements the method from the paper**. Every choice the paper does not state is a command-line flag and is logged with each result.
 
-Part of a PhD replication series at Monash University, with SALAD, LogiCo, PromptAD and Hypergraph.
+Part of a PhD replication series with SALAD, LogiCo, PromptAD and Hypergraph.
 
 ![ObjectCore pipeline](01_methodology/methodology_diagram.png)
 
