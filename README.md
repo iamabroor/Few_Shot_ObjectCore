@@ -59,6 +59,31 @@ Few_Shot_ObjectCore/
 ├── 07_replication_notes/    implementation_notes.md, issues_and_solutions.md
 └── LICENSE                  MIT (code only; dataset and weights keep their own licences)
 ```
+To display these images in your GitHub README.md, you can use the same HTML
+structure as before. Since these are in the 05_results/viz_steps/ folder, use
+this code:
+
+## Step-by-Step Visualization
+
+Below are the qualitative results and pipeline steps for the ObjectCore replication.
+
+### Pipeline Overview
+<p align="center">
+  <img src="05_results/viz_steps/summary.png" width="80%">
+</p>
+
+### Qualitative Detections
+<p align="center">
+  <img src="05_results/viz_steps/fig2_detections.png" width="48%">
+  <img src="05_results/viz_steps/fig2_detections (1).png" width="48%">
+</p>
+
+### Qualitative Comparisons
+<p align="center">
+  <img src="05_results/viz_steps/fig3_qualitative_best.png" width="48%">
+  <img src="05_results/viz_steps/fig3_qualitative_random.png" width="48%">
+</p>
+
 
 ## Quick start
 ```bash
